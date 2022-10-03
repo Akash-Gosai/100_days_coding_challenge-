@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class SumOfArray
+{
+ public static void main(String[]args)
+ {
+   //creating Scanner class
+   Scanner sc= new Scanner(System.in);
+
+   //taking input as size of the Array
+   System.out.print("Enter number of Elements ..: ");
+   int size=sc.nextInt();
+
+   //Declaring the array with given size
+   int a[]=new int[size];
+
+   //taking inputs for the given aray
+   System.out.println("Enter array elements: ");
+
+   //using loop to place the input in array
+   for(int i=0;i<a.length;i++)
+   {
+    a[i]=sc.nextInt();
+   }
+
+   //initializing 'sum' variable with '0'
+   int sum=0;
+
+   //adding array elements to 'sum' and storing in 'sum' variable
+   for(int i=0;i<a.length;i++) 
+   //or we cane use Enhance For Loop or For Each Loop
+   //for(int value:a)
+   //{
+   // sum=sum+value;
+   //}
+   {
+    sum=sum+a[i];
+   }
+   //display the result
+   System.out.println("Sum of the elements: "+sum);
+ }
+}
