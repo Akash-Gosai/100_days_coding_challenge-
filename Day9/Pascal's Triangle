@@ -1,0 +1,38 @@
+//Pascal's Triangle
+/*
+ output:
+ Enter the value: 5
+     1 
+    1 1
+   1 2 1
+  1 3 3 1
+ 1 4 6 4 1   */
+ 
+
+
+import java.util.Scanner;
+class  PascalTriangle
+{
+    public static void main(String[]args)
+    {
+        int num;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the value: ");
+        num=sc.nextInt();
+        for(int i=0;i<num;i++)
+        {
+            for(int j=num;j>i;j--)
+            {
+                System.out.print(" ");
+            }
+            int val=1;
+            for(int j=0;j<=i;j++)
+            {
+                System.out.print(val+" ");
+                val=val*(i-j)/(j+1);
+            }
+            System.out.println();
+        }
+
+    }
+}
