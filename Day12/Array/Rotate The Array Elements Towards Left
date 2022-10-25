@@ -1,0 +1,57 @@
+problem: Rotate the Array Elemens Towards Left
+Input: 2 4 6 8 10 12 14 16 18 20
+Output:
+Original array: 
+2 4 6 8 10 12 14 16 18 20 
+Enter the total number of times an array should be rotated: 3
+
+Array after left rotation:
+8 10 12 14 16 18 20 2 4 6
+
+
+Code:
+
+import java.util.Scanner;
+class RotateTowardsLeft {  
+    
+    public static void main(String[] args) {  
+        
+      
+        //Initialize array   
+        int [] arr = new int [] {2,4,6,8,10,12,14,16,18,20};   
+        
+        //Displays original array  
+        System.out.println("Original Array: ");  
+        for (int i = 0; i < arr.length; i++) {   
+            System.out.print(arr[i] + " ");   
+        } 
+        System.out.println();
+
+        Scanner sc=new Scanner(System.in);
+        //n determine the number of times an array should be rotated
+        System.out.print(("Enter the total number of times an array should be rotated: "));  
+        int n = sc.nextInt();  
+          
+        //Rotate the given array by n times toward left  
+        for(int i = 0; i < n; i++){  
+            int j, first;  
+            //Stores the first element of the array  
+            first = arr[0];  
+          
+            for(j = 0; j < arr.length-1; j++){  
+                //Shift element of array by one  
+                arr[j] = arr[j+1];  
+            }  
+            //First element of array will be added to the end  
+            arr[j] = first;  
+        }  
+          
+        System.out.println();  
+          
+        //Displaying array after rotation  
+        System.out.println("Array After Rotation Towards Left: ");  
+        for(int i = 0; i< arr.length; i++){  
+            System.out.print(arr[i] + " ");  
+        }  
+    }  
+}  
