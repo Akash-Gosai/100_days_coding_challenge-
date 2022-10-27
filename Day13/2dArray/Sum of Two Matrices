@@ -1,0 +1,79 @@
+Topic: Sum of Two Matrices
+Output:
+Elements of First Matrix
+1  2  3  
+3  4  5
+6  7  8
+Elements of Second Matrix
+3  6  2
+3  6  9
+12  3  8
+Addition of Two Matrices:
+4  8  5
+6  10  14
+18  10  16
+
+
+Code:
+
+public class SumOfTwoMatrices
+{
+    public static void main(String []args)
+    {
+        //initialize matrix mat1
+        int mat1[][]={{1,2,3},{3,4,5},{6,7,8}};
+
+        //initialize matrix mat2
+        int mat2[][]={{3,6,2},{3,6,9},{12,3,8}};
+
+        //initialize matrix sum
+        int sum[][]=new int[3][3];
+        int i,j;
+
+
+        System.out.println("Elements of First Matrix");
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)
+           {
+            System.out.print(mat1[i][j]+"  ");
+           }
+           System.out.println();
+        }
+
+        System.out.println("Elements of Second Matrix");
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)
+           {
+            System.out.print(mat2[i][j]+"  ");
+           }
+           System.out.println();
+        }
+
+        System.out.println("Addition of Two Matrices: ");
+
+        //Performs addition of matrices mat1 and mat2. Store the result in matrix sum  
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)
+           {
+            sum[i][j]=mat1[i][j]+mat2[i][j];
+           }
+        
+        }
+
+
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)
+           {
+            System.out.print(sum[i][j]+"  ");
+           }
+           System.out.println();
+        }
+    }
+}
+
+
+
