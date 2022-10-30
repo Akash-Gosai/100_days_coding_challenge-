@@ -1,0 +1,48 @@
+Topic: frequency of odd & even numbers in the given Matrix
+Output:
+Given Matrix:
+4  7  3
+3  9  78  2  6
+Frequency of odd numbers: 5
+Frequency of even numbers: 4
+
+Code:
+public class OddEven  
+{  
+    public static void main(String[] args) {  
+        int rows, cols, countOdd = 0, countEven = 0;  
+          
+        //Initialize matrix a  
+        int a[][] = {     
+                        {4, 7, 3},  
+                        {3, 9, 7},  
+                        {8, 2, 6}  
+                    };  
+            
+          //Calculates number of rows and columns present in given matrix  
+          rows = a.length;  
+        cols = a[0].length;  
+
+        System.out.println("Given Matrix: ");
+          for(int i=0;i<rows;i++)
+          {
+            for(int j=0;j<cols;j++)
+            {
+                System.out.print(a[i][j]+"  ");
+            }
+            System.out.println();
+          }
+        //Counts the number of even elements and odd elements  
+        for(int i = 0; i < rows; i++){  
+            for(int j = 0; j < cols; j++){  
+              if(a[i][j] % 2 == 0)  
+                countEven++;  
+              else  
+                countOdd++;  
+            }  
+        }  
+          
+        System.out.println("Frequency of odd numbers: " + countOdd);  
+        System.out.println("Frequency of even numbers: " + countEven);  
+    }  
+}  
