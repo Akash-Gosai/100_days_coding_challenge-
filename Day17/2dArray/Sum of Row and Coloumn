@@ -1,0 +1,64 @@
+Topic: Sum of row and coloumn
+output: 
+given matrix:  
+1  9  3  
+3  5  1
+2  8  9
+Sum of 1 row: 13
+Sum of 2 row: 9
+Sum of 3 row: 19
+Sum of 1 column: 6
+Sum of 2 column: 22
+Sum of 3 column: 13
+
+
+
+
+Code:
+public class SumOfRowandColoumn 
+{  
+    public static void main(String[] args) 
+    {  
+        int rows, cols, sumRow, sumCol;  
+          
+        //Initialize matrix a  
+        int a[][] = {     
+                        {1, 9, 3},  
+                        {3, 5, 1},  
+                        {2, 8, 9}  
+                    };  
+            
+          //Calculates number of rows and columns present in given matrix  
+          rows = a.length;  
+          cols = a[0].length;  
+
+          System.out.println("given matrix:  ");
+          for(int i=0;i<rows;i++)
+          {
+            for(int j=0;j<cols;j++)
+            {
+                System.out.print(a[i][j]+"  ");
+            }
+            System.out.println();
+          }
+        
+          
+        //Calculates sum of each row of given matrix  
+        for(int i = 0; i < rows; i++){  
+            sumRow = 0;  
+            for(int j = 0; j < cols; j++){  
+              sumRow = sumRow + a[i][j];  
+            }  
+            System.out.println("Sum of " + (i+1) +" row: " + sumRow);  
+        }  
+          
+        //Calculates sum of each column of given matrix  
+        for(int i = 0; i < cols; i++){  
+            sumCol = 0;  
+            for(int j = 0; j < rows; j++){  
+              sumCol = sumCol + a[j][i];  
+            }  
+            System.out.println("Sum of " + (i+1) +" column: " + sumCol);  
+        }  
+    }  
+}  
