@@ -1,0 +1,65 @@
+Topic: Two Strings are Anagram or not
+
+Results:
+1st case:if both strings are in UpperCase or LowerCase
+output:
+Enter first String: listen
+Enter second String: silent
+Result: Strings are Anagram.
+
+2nd case: if one of the string or both string contains both upper and lower case.
+Output:
+Enter first String: listen
+Enter second String: SILent
+Result: Strings are Anagram.
+
+3rd Case: if one of the string or both the strings contains extra space.
+Output:
+Enter first String: silent rain
+Enter second String: listen iran
+Result: Strings are Anagram.
+
+Code:
+import java.util.*;
+
+public class Anagram
+{
+    public static void main(String[]args)
+    {
+        //input two Strings from user
+        Scanner sc=new Scanner(System.in);
+        //first string
+        System.out.print("Enter first String: ");
+        String x=sc.nextLine();
+
+        //second string
+        System.out.print("Enter second String: ");
+        String y=sc.nextLine();
+
+        //removing extra space if string contains any space
+        x=x.replace(" ","");
+        y=y.replace(" ","");
+
+        //Converting the strings into lower case
+        x=x.toLowerCase();
+        y=y.toLowerCase();
+
+        //changing string to character array
+        char a[]=x.toCharArray();
+        char b[]=y.toCharArray();
+
+        //Sorting both String  using Array.sort()
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        //checking both strings are equal or not
+        boolean result=Arrays.equals(a,b);
+        if(result==true)
+        {
+            System.out.println("Result: Strings are Anagram.");
+        }
+        else{
+            System.out.println("Result: Strings are not Anagram.");
+        }
+    }
+}
