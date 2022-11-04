@@ -1,0 +1,39 @@
+Topic: Remove a particular character from a String
+TEST CASES:
+1st test: 
+Enter a String: vitbhopal
+Enter Character: i
+After removing character i from the inputString the result will be: vtbhopal
+2nd case:
+Enter a String: 9832456789
+Enter Character: 9
+After removing character 9 from the inputString the result will be: 83245678
+
+Code:
+import java.util.*;
+class RemoveChar
+{
+    public static void main(String[]args)
+    {
+        Scanner sc= new Scanner(System.in);
+        //input a string
+        System.out.print("Enter a String: ");
+        String s1=sc.next();
+        //input a character to be removed
+        System.out.print("Enter Character: ");
+        char c=sc.next().charAt(0);
+
+        //initialize an empty string 
+        String s2="";
+
+        for(int i=0;i<s1.length();i++)
+        {
+            if(c!=s1.charAt(i))
+            {
+                s2=s2+s1.charAt(i);
+            }
+        }
+        System.out.print("After removing character " + c + " from the inputString the result will be: " + s2);
+
+    }
+}
