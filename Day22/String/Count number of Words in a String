@@ -1,0 +1,50 @@
+Topic: Count number of words in a line of string
+test case:
+Enter line of string: my name is akash
+Total number of words: 4
+
+
+Code:1
+//without using any function:
+
+import java.util.*;
+class CountWord
+{
+    public static void main(String[]args)
+    {
+        String str;
+        //input a string
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter line of string: ");
+        str=sc.nextLine();
+
+        int count=1;
+        for(int i=0;i<str.length()-1;i++)
+        {
+            if((str.charAt(i)==' ')&&(str.charAt(i-1)!=' '))
+            {
+                count++;
+            }
+        }
+        System.out.println("Total number of words: "+count);
+    }
+}
+
+
+code=2:
+//using  split() method
+
+import java.util.*;
+class CountWord{
+    public static void main(String[]args)
+    {
+        String str;
+        //input string
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter line of string: ");
+        str=sc.nextLine();
+        //declaring a string array
+        String[]words= str.split(" ");
+        System.out.print("Total number of words: "+words.length);
+    }
+}
