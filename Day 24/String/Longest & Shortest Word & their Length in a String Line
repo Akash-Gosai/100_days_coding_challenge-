@@ -1,0 +1,56 @@
+Topic: Find Longest & Shortest word and their length in a string line
+test case:
+Enter any String Line: India will play against Australia
+The Longest word is: Australia
+The Length of the Longest word is: 9
+The Smallest word is: will
+The Length of the Smallest word is: 4
+
+output:
+
+import java.util.*;
+class LongestAndSmallestWord
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String input,word="",longword="",smallword="";
+        int len,longlen=0,wordlen=0,smalllen;
+        char ch;
+        System.out.print("Enter any String Line: ");
+        input=sc.nextLine().trim();
+        input=input+" ";
+        len=input.length();
+        smalllen=len;
+        for(int i=0;i<len;i++)
+        {
+            ch=input.charAt(i);
+            if(ch==' ')
+            {
+                wordlen=word.length();
+                if(wordlen>longlen)
+                {
+                    longlen=wordlen;
+                    longword=word;
+                }
+                if(wordlen<smalllen)
+                {
+                    smalllen=wordlen;
+                    smallword=word;
+                }
+                word="";
+
+            }
+            else
+            {
+                word=word+ch;
+            }
+        }
+        System.out.print("The Longest word is: "+longword+"\n");
+        System.out.print("The Length of the Longest word is: "+longlen+"\n");
+        System.out.print("The Smallest word is: "+smallword+"\n");
+        System.out.print("The Length of the Smallest word is: "+smalllen);
+
+    }
+
+}
