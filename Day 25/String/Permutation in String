@@ -1,0 +1,50 @@
+Topic: Permutation in String
+Test Case:
+Enter a String: ABC
+PERMUTATIONS ARE: 
+ABC
+ACB
+BAC
+BCA
+CBA
+CAB
+
+code:
+import java.util.*;
+class StringPermutation
+{
+    public static void main(String[]args)
+    {
+        Scanner str=new Scanner(System.in);
+        System.out.print("Enter a String: ");
+        String s=str.next();
+        System.out.println("PERMUTATIONS ARE: ");
+        permute(0,s);
+    }
+    public static String swap(String s,int a, int b)
+    {
+        char ch[]=s.toCharArray();
+        char p=ch[a];
+        ch[a]=ch[b];
+        ch[b]=p;
+        return String.valueOf(ch);
+    }
+    public static void permute(int index,String s)
+    {
+        if(index==s.length()-1)
+        {
+            System.out.println(s);
+            return;
+        }
+
+        for(int i=index;i<s.length();i++)
+        {
+            //SWAP
+            s=swap(s,i,index);
+            //RECURSION
+            permute(index+1,s);
+            //BACKTRACK
+            s=swap(s,i,index);
+        }
+    }
+}
