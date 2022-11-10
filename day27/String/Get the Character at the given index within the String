@@ -1,0 +1,30 @@
+Topic: Get the Charracter at the given index within the String
+test case:
+User String- india
+User Index- 4 character-> a is at index: 4
+
+Code:
+class FindCharIndex
+{
+    public static void main(String[]arrgs)
+    {
+        String str="india";
+        int index=4;
+        FindCharIndex.getChar(str,index);
+
+    }
+    private static void getChar(String str,int index)
+    {
+        String userString= str;
+        int userIndex= index;
+        System.out.println("User String- "+userString+ "\n"+"User Index- "+userIndex);
+
+
+        char[] charArray=userString.toCharArray();
+        for(int i=0;i<charArray.length;i++)
+        {
+           if(i==userIndex)
+            System.out.println(" character-> "+charArray[i]+" is at index: "+i);
+        }
+    }
+}
