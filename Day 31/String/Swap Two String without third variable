@@ -1,0 +1,37 @@
+Topic: Swap to String without using third variable.
+
+test case:
+Input two string:
+String 1: VIT
+String 2: Bhopal
+Strings after swaping:
+String 1: Bhopal
+String 2: VIT
+
+Code:
+
+import java.util.Scanner;
+class SwapString
+{
+    public static void main(String[]args)
+    {
+        //input two string
+        System.out.println("Input two string:  ");
+        Scanner sc= new Scanner(System.in);
+        System.out.print("String 1: ");
+        String str1= sc.next();
+        System.out.print("String 2: ");
+        String str2=sc.next();
+
+        //concatenate both string
+        str1=str1+str2;
+        //length of first string = str1.length() and second string = str2.length()
+        //Extract second string(str2) from concatenated str1
+        str2=str1.substring(0,str1.length()-str2.length());
+        //Extract first string(str1) from concatenated str1
+        str1=str1.substring(str2.length());
+
+        System.out.println("Strings after swaping: ");
+        System.out.print("String 1: "+str1+"\n"+"String 2: "+str2);
+    }
+}
