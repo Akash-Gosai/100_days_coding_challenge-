@@ -1,0 +1,80 @@
+Topic: Reverse String Using Different Technique
+       *For Loop
+       *While Loop
+       *Static Method
+       
+1/ For Loop
+import java.util.Scanner;
+class ReverseString
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter any String: ");
+        String str=sc.nextLine();
+        System.out.println("Reverserd String is :  ");
+        for(int i=str.length();i>0;i--)
+        {
+           System.out.print(str.charAt(i-1));
+        }
+    }
+   }
+   
+Test Case:
+Enter any String: 
+VIT Bhopal University
+Reverserd String is :  
+ytisrevinU lapohB TIV
+
+2/While Loop
+import java.util.Scanner;
+class ReverseString
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter any String: ");
+        String str=sc.nextLine();
+        System.out.println("Reverserd String is :  ");
+        int i=str.length();
+        while(i>0)
+        {
+            System.out.print(str.charAt(i-1));
+            i--;
+            
+        }
+    }
+}
+test case:
+Enter a String:
+we are lions
+
+
+3/static method
+
+import java.util.Scanner;
+class ReverseString
+{
+    public static void main(String[]args)
+    {
+         ReverseString rev=new ReverseString();
+         Scanner sc= new Scanner(System.in);
+         System.out.println("Enter a String: ");
+         String str=sc.nextLine();
+         System.out.println("Reversed String is :"+ rev.reverse(str));
+       
+    }
+    static String reverse(String str2)
+    {
+       String rev="";
+       for(int i=str2.length();i>0;i--)
+       {
+        rev=rev+(str2.charAt(i-1));
+       }
+       return rev;
+    }
+}
+test case:
+Enter a String:
+we are lions
+Reversed String is :snoil era ew
