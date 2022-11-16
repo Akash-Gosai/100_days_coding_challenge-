@@ -1,0 +1,38 @@
+Topic: Linear Search
+Test Case: if item present in list
+Search :
+4
+entered element is present at position: 6
+Test Case: if element is not present in list
+Search : 
+32
+Entered element is not present in list
+
+Code:
+import java.util.Scanner;
+class LinearSearch
+{
+    public static void main(String[]args)
+    {
+       int arr[]={2,6,3,8,0,4,7,99,12,34,56,78,97};
+       Scanner sc =new Scanner(System.in);
+       System.out.println("Search : ");
+       
+       int item=sc.nextInt();
+       int i;
+
+       for( i=0;i<arr.length;i++)
+       {
+        if(arr[i]==item)
+        {
+            System.out.println("entered element is present at position: "+(i+1));
+            break;
+        }
+       }
+       if( i==arr.length)
+       {
+            System.out.println(("Entered element is not present in list"));
+       }
+
+    }
+}
