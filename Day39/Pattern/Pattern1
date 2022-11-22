@@ -1,0 +1,34 @@
+Topic: Print the following pattern
+1098765432*
+109876543*1
+10987654*21
+1098765*321
+109876*4321
+10987*54321
+1098*654321
+109*7654321
+10*87654321
+*987654321
+
+Code:
+class Pattern1
+{
+    public static void main(String[]args)
+    {
+          
+        int i,j,lines=10;  
+            for(i=1;i<=lines;i++){// this loop is used to print the lines  
+                {
+                    for(j=lines;j>=1;j--)
+                    { 
+                     if(j!=i)  
+                      System.out.print(j);  
+                      else  
+                       System.out.print("*");  
+                    }  
+                }
+              System.out.println("");  
+              }  
+                  
+    }
+}
