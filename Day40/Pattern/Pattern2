@@ -1,0 +1,38 @@
+Topic: Pattern
+Pattern:
+*0000*0000*
+0*000*000*0
+00*00*00*00
+000*0*0*000
+0000***0000
+
+Code:
+import java.util.Scanner;
+public class Pattern2 
+{    
+  public static void main(String[] args)
+    {    
+    Scanner sc= new Scanner(System.in);
+    System.out.print("Enter number of lines: ");
+    int lines=sc.nextInt();    
+    int i,j;    
+    for(i=1;i<=lines;i++){// this loop is used to print lines    
+      for(j=1;j<=lines;j++){// this loop is used to print * in a line    
+          if(i==j)    
+             System.out.print("*");    
+            else    
+           System.out.print("0");    
+      }    
+      j--;    
+       System.out.print("*");    
+      while(j>=1){// this loop is used to print * in a line    
+          if(i==j)    
+           System.out.print("*");    
+          else    
+           System.out.print("0");    
+          j--;    
+      }    
+    System.out.println("");    
+    }    
+    }    
+}    
