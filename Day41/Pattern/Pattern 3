@@ -1,0 +1,34 @@
+Pattern:
+    1
+   222
+  33333
+ 4444444
+555555555
+
+Code:
+class Pattern3
+{
+    public static void main(String[]arrgs)
+    {
+        Scanner sc=new Scanner(System.in);
+
+        System.out.print("Enter maximum row number: ");
+        int maxr=sc.nextInt();
+        System.out.print("Enter Maximum Coloumn number: ");
+        int maxc=sc.nextInt();
+        for(int i=1;i<=maxr;i++)
+        {
+            for(int j=1;j<=maxc;j++)
+            {
+                if(j>=((maxr+1)-i) && j<=((maxr-1)+i))
+               {
+                System.out.print(i);
+               }
+               else{
+                System.out.print(" ");
+               }
+            }
+            System.out.println("");
+        }
+    }
+}
