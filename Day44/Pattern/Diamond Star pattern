@@ -1,0 +1,47 @@
+Patter: Diamond Star Pattern
+      *      
+     ***     
+    *****    
+   *******   
+  *********  
+ *********** 
+*************
+ ***********
+  *********
+   *******
+    *****
+     ***     
+      *
+      
+Code:
+import java.util.Scanner;
+class Pattern6
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Rows");
+        int rows=sc.nextInt();
+        int i,j,k=(rows-1)/2;
+        for(i=1;i<=rows;i++)
+        {
+            if(i<=(rows+1)/2) k++;
+            else
+            k--;
+            for(j=1;j<=rows;j++)
+            {
+                if(j>=((rows+1)-k) && j<=k)
+                {
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
+      
+      
+      
