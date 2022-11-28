@@ -1,0 +1,59 @@
+Topic: Sandglass Star Pattern
+Pattern:
+ * * * * *                  
+  * * * * 
+   * * *  
+    * *   
+     *    
+     *    
+    * *
+   * * *
+  * * * *
+ * * * * *
+ 
+ 
+ Code:
+ import java.util.Scanner;
+class Pattern7
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter rows: ");
+        int rows=sc.nextInt();
+        for(int i=1;i<=rows;i++)
+        {
+            boolean k=true;
+            for(int j=0;j<=(rows-1);j++)
+            {
+               if(i<=(rows/2))
+                {
+                    if(j>=i && j<=(rows-i) && k)
+                   {
+                    System.out.print("*");
+                    k=false;
+                   }
+                  else 
+                   {
+                    System.out.print(" ");
+                    k=true;
+                   }
+                }
+                else 
+                {
+                    if(j>=(rows+1)-i && j<=i-1 && k)
+                    {
+                        System.out.print("*");
+                        k=false;
+                    }
+                    else 
+                    { 
+                        System.out.print(" ");
+                        k=true;
+                    }
+                }
+            }
+            System.out.println("");
+        }
+    }
+}
