@@ -1,0 +1,40 @@
+public class LinkedList  
+{  
+ Node head;  // head of list  
+ static class Node {  
+ int data;  
+         Node next;  
+ Node(int d)  { data = d;  next=null; }  
+     }  
+     /* This function prints contents of the linked list starting from head */  
+ public void display()  
+     {  
+         Node n = head;  
+ while (n != null)  
+         {  
+ System.out.print(n.data+" \n");  
+             n = n.next;  
+         }  
+     }  
+     /* method to create a simple linked list with 3 nodes*/  
+ public static void main(String[] args)  
+     {  
+         /* Start with the empty list. */  
+ LinkedList list = new LinkedList();  
+  
+ list.head       = new Node(500);  
+         Node second      = new Node(600);  
+         Node third       = new Node(700);  
+  
+ list.head.next = second; // Link first node with the second node  
+ second.next = third; // Link first node with the second node  
+ list.display();  
+     }  
+}
+
+//output
+/*
+500
+600
+700
+*/
